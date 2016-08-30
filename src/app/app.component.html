@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+<table class="line">
+ <tr>
+  <td>设备号</td>
+  <td>流量卡号</td>
+  <td>类别</td>
+ </tr>
+ <tr *ngFor="let item of list">
+    <td *ngFor="let key of getKeys(item)">
+        {{ item[key]  }}
+    </td>
+</tr>
+</table>

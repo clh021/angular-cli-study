@@ -54,6 +54,9 @@ System.config({
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
   },
+  // traceurOptions: {
+  //   "annotations": true,
+  // },
   packages: cliSystemConfigPackages
 });
 
