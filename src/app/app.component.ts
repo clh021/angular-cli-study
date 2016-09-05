@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-
+// import { MarkdownComponent } from 'ng2-markdown';
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
+  // templateURL: 'markdown.demo.html',
+  // directives: [ MarkdownComponent ]
 })
 export class AppComponent {
   generation = 0;
@@ -26,7 +28,6 @@ export class AppComponent {
       'class': ['的士','公交','警车'][this._randomNum(0,2)],
     });
   }
-  //关键就是这个getKeys方法，得自己写，真他妈的
   getKeys(item){
       return Object.keys(item);
   }

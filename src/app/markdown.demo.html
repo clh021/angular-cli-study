@@ -1,0 +1,51 @@
+<ng2-markdown>
+# Example: Using inline Markdown
+
+*sample html*
+```language-html
+<ng2-markdown>
+### MARKDOWN
+this really [works](google.com)
+``language-javascript
+System.import('stuff').then(function(m) {
+  // modules yay
+});
+``
+</ng2-markdown>
+```
+</ng2-markdown>
+
+<hr>
+
+<ng2-markdown [src]="'demo.md'"></ng2-markdown>
+<ng2-markdown>
+*demo.md*
+```language-html
+# Example: Loading from a file
+
+``language-html
+<ng2-markdown [src]="'demo.md'"></ng2-markdown>
+``
+```
+</ng2-markdown>
+
+<hr>
+
+<ng2-markdown [data]="data"></ng2-markdown>
+<ng2-markdown>
+*demo.js*
+```language-javascript
+export class DemoComponent {
+  constructor() {
+    this.data = `
+    # Example: Loading data
+
+    *sample html*
+    \`\`\`language-html
+    <ng2-markdown [data]="data"></ng2-markdown>
+    \`\`\`
+    `
+  }
+}
+```
+</ng2-markdown>

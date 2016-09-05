@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试</title>
+</head>
+<body>
+    <div id="blogcontent"></div>
+    <div id="bloglist"></div>
+    
+    <div id="showsyncjubao"style="display: none;">正在进行……</div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // var inte = setInterval(function () {
+        //     $.ajax({
+        //         type: 'get',
+        //         url: 'http://4g.womenxing.com/?r=site/syncjubao3&u=l',
+        //         data: {},
+        //         success: function (data) {
+        //             $("#showsyncjubao").prepend(data);//+'<br />'
+        //         }
+        //     })
+        // }, 5000);
+    </script>
+    
+    
+    <script type="text/javascript">
+        var bloglist_url = 'https://api.github.com/repos/clh021/clh021.github.io/contents/markdown?callback=GitBlog.listUpdata';
+        var bloglist = null;
+        var r= $.ajax({url:bloglist_url,async:false});
+        // $("#bloglist").html(bloglist.responseText);
+        // bloglist = $.parseJSON(r.responseText);
+        console.log(typeof(r));
+        console.log(typeof(r.responseText));
+        // console.log($.parseJSON(r.responseText));
+        //解决了列表问题，也可以通过ng2-markdown解决展现问题，但是此处暂须解决文本到对象后循环展现列表的问题
+    </script>
+</body>
+</html>
